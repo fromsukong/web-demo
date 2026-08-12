@@ -53,7 +53,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600;800&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
-<script defer src="https://analytics.fromsukong.com/script.js" data-website-id="625280bf-656f-4a74-bc41-610cc8820fe4"></script>
 <style>
   :root{
     --bg:#FAF6F4; --card:#FFFFFF; --ink:#3F3438; --muted:#8A7B80;
@@ -270,6 +269,37 @@
   const step = () => track.querySelector('.rv-card').offsetWidth + 12;
   document.getElementById('rvNext').onclick = () => track.scrollBy({left: step(), behavior:'smooth'});
   document.getElementById('rvPrev').onclick = () => track.scrollBy({left: -step(), behavior:'smooth'});
+</script>
+<script>
+(function () {
+  var KEY = 'fs-consent';
+  var choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+  function loadAnalytics() {
+    var s = document.createElement('script');
+    s.src = 'https://analytics.fromsukong.com/script.js';
+    s.setAttribute('data-website-id', '625280bf-656f-4a74-bc41-610cc8820fe4');
+    s.defer = true;
+    document.head.appendChild(s);
+  }
+  if (choice === 'accepted') { loadAnalytics(); return; }
+  if (choice === 'declined') { return; }
+  var st = document.createElement('style');
+  st.textContent = '#consent-banner{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(15,15,15,.97);color:#F2EDE3;font-size:13px;line-height:1.6;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:0 2px 14px rgba(0,0,0,.35);font-family:"Noto Sans Thai",sans-serif}#consent-banner span{flex:1;min-width:210px}#consent-banner button{border:0;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}#cb-accept{background:#06C755;color:#0F2418}#cb-decline{background:transparent;color:#CFC9BE;border:1px solid #555;margin-left:8px}';
+  document.head.appendChild(st);
+  var b = document.createElement('div');
+  b.id = 'consent-banner';
+  b.innerHTML = '<span>เราใช้คุกกี้เพื่อเก็บสถิติการเข้าชมเว็บไซต์ (Analytics) ข้อมูลไม่ระบุตัวตน</span><div><button id="cb-accept">ยอมรับ</button><button id="cb-decline">ปฏิเสธ</button></div>';
+  document.body.appendChild(b);
+  document.getElementById('cb-accept').onclick = function () {
+    try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+    b.remove(); loadAnalytics();
+  };
+  document.getElementById('cb-decline').onclick = function () {
+    try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
+    b.remove();
+  };
+})();
 </script>
 </body>
 </html>
