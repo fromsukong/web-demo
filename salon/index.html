@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ออม เฮียร์ สตูดิโอ — ร้านทำผม เล็บ สปา จ.แพร่</title>
+<meta name="description" content="ออม เฮียร์ สตูดิโอ ร้านทำผม ทำเล็บ และสปา ในเมืองแพร่ เปิดมากว่า 8 ปี ปรึกษาฟรี จองคิวผ่าน LINE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600;800&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<script defer src="https://analytics.fromsukong.com/script.js" data-website-id="625280bf-656f-4a74-bc41-610cc8820fe4"></script>
+<style>
+  :root{
+    --bg:#FAF6F4; --card:#FFFFFF; --ink:#3F3438; --muted:#8A7B80;
+    --brand:#B76E79; --brand-dark:#9A5A63; --line:#EADFD9; --cta:#06C755;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',sans-serif;line-height:1.7;padding-bottom:92px}
+  h1,h2,h3{font-family:'Noto Serif Thai',serif;line-height:1.35}
+  img{display:block;width:100%}
+  a{color:inherit;text-decoration:none}
+  section{max-width:640px;margin:0 auto;padding:44px 20px 0}
+  .sec-title{font-size:26px;font-weight:800;margin-bottom:6px}
+  .sec-sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+
+  .demo-badge{position:fixed;top:12px;left:12px;z-index:60;background:rgba(46,30,34,.82);color:#F7EDEA;font-size:12px;font-weight:500;padding:7px 13px;border-radius:999px;letter-spacing:.3px;display:inline-block}
+
+  .hero{position:relative;height:52vh;min-height:340px;max-height:480px;background:linear-gradient(rgba(58,30,38,.5),rgba(58,30,38,.72)),url(assets/hero.jpg) center/cover}
+  .hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 20px 34px;color:#FDF6F4}
+  .hero-logo{font-family:'Noto Serif Thai',serif;font-weight:800;font-size:34px;letter-spacing:.5px}
+  .hero-tag{font-size:15px;opacity:.92;margin-top:4px}
+  .hero-chip{display:inline-block;margin-top:14px;font-size:13px;font-weight:500;padding:5px 14px;border:1px solid rgba(253,246,244,.45);border-radius:999px;width:fit-content}
+
+  .about-copy{font-size:15px;color:#4E4346}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{font-size:13px;color:var(--brand-dark);background:#F8ECEC;border:1px solid #F0DAD8;padding:5px 13px;border-radius:999px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .grid img{height:150px;object-fit:cover;border-radius:12px}
+  .grid .wide{grid-column:1/-1;height:200px}
+
+  .rv{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 8px}
+  .rv::-webkit-scrollbar{display:none}
+  .rv-card{flex:0 0 84%;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:170px;display:flex;flex-direction:column;gap:10px}
+  .stars{color:#E8A33D;font-size:15px;letter-spacing:2px}
+  .rv-text{font-size:14px;color:#4E4346;flex:1}
+  .rv-tag{font-size:12px;color:var(--muted)}
+  .rv-nav{display:none;justify-content:flex-end;gap:8px;margin-top:10px}
+  @media(min-width:768px){
+    .hero-inner{justify-content:center;align-items:center;text-align:center}
+    .hero-chip{margin:14px auto 0}
+    .rv-card{flex-basis:380px}
+    .rv-nav{display:flex}
+  }
+  .rv-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--brand);font-size:18px;cursor:pointer}
+
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .price-row{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;border-bottom:1px solid var(--line)}
+  .price-row:last-of-type{border-bottom:none}
+  .room{font-weight:700;font-size:15px}
+  .room-note{font-size:12px;color:var(--muted);font-weight:400}
+  .price{font-family:'Noto Serif Thai',serif;font-weight:800;font-size:17px;color:var(--brand-dark);white-space:nowrap}
+  .price-note{font-size:12px;color:var(--muted);margin-top:10px}
+
+  .map-wrap{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .map-wrap iframe{display:block;width:100%;height:240px;border:0}
+  .map-link{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:var(--brand-dark);border-bottom:2px solid var(--brand)}
+
+  .contact-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 18px}
+  .contact-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .contact-row:last-child{border-bottom:none}
+  .contact-row svg{flex:0 0 26px;width:26px;height:26px}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#FFFFFF;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px}
+  .sticky-thumb{width:46px;height:46px;border-radius:10px;object-fit:cover;flex:0 0 46px}
+  .sticky-info{flex:1;min-width:0}
+  .sticky-name{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sticky-price{font-size:12px;color:var(--muted)}
+  .sticky-cta{display:flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:15px;padding:12px 22px;border-radius:12px;flex-shrink:0}
+  .sticky-cta svg{width:20px;height:20px;flex:0 0 20px}
+  @media(min-width:768px){
+    .sticky{width:min(680px,100%);left:50%;transform:translateX(-50%);border-radius:16px 16px 0 0}
+  }
+</style>
+</head>
+<body>
+
+<a class="demo-badge" href="../" aria-label="กลับไปหน้าตัวอย่างทั้งหมด">‹ ดูตัวอย่างทั้งหมด</a>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-logo">ออม เฮียร์ สตูดิโอ</div>
+    <div class="hero-tag">ทำผม ทำเล็บ สปา ในเมืองแพร่ — เปิดมากว่า 8 ปี ลูกค้าประจำกลับมาหมด</div>
+    <span class="hero-chip">จองคิวผ่าน LINE</span>
+  </div>
+</header>
+
+<section id="about">
+  <h2 class="sec-title">เกี่ยวกับร้าน</h2>
+  <p class="about-copy">เปิดร้านมา 8 ปี ดูแลผมและเล็บให้สาวๆ เมืองแพร่ เราไม่รับวอล์กอินเยอะเกินไป เพราะอยากดูแลลูกค้าแบบไม่ต้องนอนรอนาน ใครมีรูปทรงผมที่อยากได้ เอามาให้ดูได้เลย ปรึกษาฟรี ไม่ต้องเกรงใจ</p>
+  <div class="chips">
+    <span class="chip">เปิดทุกวัน 9:00–19:00</span>
+    <span class="chip">ปรึกษาฟรี</span>
+    <span class="chip">จองคิวผ่าน LINE</span>
+    <span class="chip">อุปกรณ์ฆ่าเชื้อทุกครั้ง</span>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="sec-title">ผลงาน</h2>
+  <p class="sec-sub">ทรงที่ทำจริง มาจากหน้าร้าน</p>
+  <div class="grid">
+    <img class="wide" src="assets/hero.jpg" alt="บรรยากาศในร้าน">
+    <img src="assets/hair.jpg" alt="ทรงผม">
+    <img src="assets/studio.jpg" alt="มุมร้าน">
+    <img src="assets/barber.jpg" alt="การตัดผมชาย">
+    <img src="assets/spa.jpg" alt="สปา">
+  </div>
+</section>
+
+<section id="reviews">
+  <h2 class="sec-title">รีวิวจากลูกค้า</h2>
+  <p class="sec-sub">คะแนน 4.9 จาก 200 รีวิว</p>
+  <div class="rv" id="rvTrack">
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">พี่อ้อมตัดผมเก่งมาก เข้าใจว่าอยากได้ทรงไหน พูดครั้งเดียวรู้เรื่อง ราคาไม่แพง คุ้มมาก</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">ร้านสะอาด อุปกรณ์ใหม่ มาทำสีผม สีตรงตามที่ขอทุกครั้ง ไว้ใจได้จริงๆ</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">จองคิวผ่าน LINE สะดวกมาก ไม่ต้องมานั่งรอ ตรงเวลาเสมอ เหมาะกับคนเวลาน้อย</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">ทำเล็บกับที่นี่เป็นประจำ อยู่ทรงดี ไม่หลุดง่าย ช่างใจเย็น ทำสวยทุกครั้ง</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+  </div>
+  <div class="rv-nav">
+    <button class="rv-btn" id="rvPrev" aria-label="ก่อนหน้า">‹</button>
+    <button class="rv-btn" id="rvNext" aria-label="ถัดไป">›</button>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="sec-title">บริการและราคา</h2>
+  <p class="sec-sub">ราคาเริ่มต้น ราคาจริงขึ้นอยู่กับความยาวและสภาพเส้นผม</p>
+  <div class="price-card">
+    <div class="price-row">
+      <div><div class="room">สระไดร์</div><div class="room-note">สระ + ไดร์จัดทรง</div></div>
+      <div class="price">300 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="room">ตัดผม</div><div class="room-note">หญิง / ชาย</div></div>
+      <div class="price">450 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="room">ทำสีผม</div><div class="room-note">สีเดียว ถึง สีผสม</div></div>
+      <div class="price">1,800 บาท ขึ้นไป</div>
+    </div>
+    <div class="price-row">
+      <div><div class="room">ยืดผมตรง</div><div class="room-note">เคราติน ถึง ยืดถาวร</div></div>
+      <div class="price">2,500 บาท ขึ้นไป</div>
+    </div>
+    <div class="price-row">
+      <div><div class="room">นวดหน้า / สปา</div><div class="room-note">45 นาที</div></div>
+      <div class="price">800 บาท</div>
+    </div>
+  </div>
+  <p class="price-note">สอบถามราคาแม่นยำก่อนเข้าร้าน ส่งรูปผมใน LINE ได้เลย</p>
+</section>
+
+<section id="map">
+  <h2 class="sec-title">แผนที่</h2>
+  <div class="map-wrap">
+    <iframe src="https://maps.google.com/maps?q=18.1445,100.1410&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="แผนที่ที่ตั้ง"></iframe>
+  </div>
+  <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=18.1445,100.1410" target="_blank" rel="noopener">เปิดใน Google Maps →</a>
+</section>
+
+<section id="contact">
+  <h2 class="sec-title">ติดต่อ</h2>
+  <div class="contact-card">
+    <a class="contact-row" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#06C755"><path d="M24 12.073c0-5.56-5.373-10.067-12-10.067S0 6.513 0 12.073c0 4.946 4.226 9.106 10.135 9.895v-7.001H7.083v-2.894h3.052V9.954c0-2.558 1.566-3.972 3.979-3.972 1.155 0 2.36.205 2.36.205v2.624h-1.33c-1.309 0-1.718.782-1.718 1.585v1.902h2.925l-.468 2.894h-2.457v7.001C18.775 21.18 24 16.932 24 12.073z"/></svg>
+      <span>LINE: @yourlineid (ตอบไว)</span>
+    </a>
+    <a class="contact-row" href="tel:0912345678">
+      <svg viewBox="0 0 24 24" fill="#B76E79"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.01z"/></svg>
+      <span>โทร: 091-234-5678</span>
+    </a>
+    <div class="contact-row">
+      <svg viewBox="0 0 24 24" fill="#B76E79"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+      <span>88 ถ.เจริญเมือง ต.ในเวียง อ.เมือง จ.แพร่ 54000</span>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center;color:var(--muted);font-size:12px;padding:34px 20px 6px">
+  © ออม เฮียร์ สตูดิโอ — เว็บไซต์ตัวอย่าง
+</footer>
+
+<div class="sticky">
+  <img class="sticky-thumb" src="assets/hair.jpg" alt="">
+  <div class="sticky-info">
+    <div class="sticky-name">ออม เฮียร์ สตูดิโอ</div>
+    <div class="sticky-price">เริ่มต้น 300 บาท</div>
+  </div>
+  <a class="sticky-cta" href="https://line.me/R/ti/p/@yourlineid" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-5.56-5.373-10.067-12-10.067S0 6.513 0 12.073c0 4.946 4.226 9.106 10.135 9.895v-7.001H7.083v-2.894h3.052V9.954c0-2.558 1.566-3.972 3.979-3.972 1.155 0 2.36.205 2.36.205v2.624h-1.33c-1.309 0-1.718.782-1.718 1.585v1.902h2.925l-.468 2.894h-2.457v7.001C18.775 21.18 24 16.932 24 12.073z"/></svg>
+    จองคิว
+  </a>
+</div>
+
+<script>
+  const track = document.getElementById('rvTrack');
+  const step = () => track.querySelector('.rv-card').offsetWidth + 12;
+  document.getElementById('rvNext').onclick = () => track.scrollBy({left: step(), behavior:'smooth'});
+  document.getElementById('rvPrev').onclick = () => track.scrollBy({left: -step(), behavior:'smooth'});
+</script>
+</body>
+</html>
