@@ -5,6 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>เรือนไม้ โฮมสเตย์ — ที่พักบ้านไม้กลางสวน จ.แพร่</title>
 <meta name="description" content="เรือนไม้ โฮมสเตย์ บ้านไม้เก่าแก่อายุกว่า 60 ปี กลางสวนยาง เงียบสงบ ห่างตัวเมืองแพร่ 10 นาที">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  try {
+    if (localStorage.getItem('fs-consent') === 'accepted') {
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+    }
+  } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R5CYWR2M4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4R5CYWR2M4');
+</script>
 <link rel="canonical" href="https://web-demo.fromsukong.com/homestay/">
 <meta name="theme-color" content="#2F5D50">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -277,17 +300,9 @@
 <script>
 (function () {
   var KEY = 'fs-consent';
-  var choice = null;
-  try { choice = localStorage.getItem(KEY); } catch (e) {}
-  function loadAnalytics() {
-    var s = document.createElement('script');
-    s.src = 'https://analytics.fromsukong.com/script.js';
-    s.setAttribute('data-website-id', '625280bf-656f-4a74-bc41-610cc8820fe4');
-    s.defer = true;
-    document.head.appendChild(s);
-  }
-  if (choice === 'accepted') { loadAnalytics(); return; }
-  if (choice === 'declined') { return; }
+  var made = null;
+  try { made = !!localStorage.getItem(KEY); } catch (e) { made = true; }
+  if (made) { return; }
   var st = document.createElement('style');
   st.textContent = '#consent-banner{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(15,15,15,.97);color:#F2EDE3;font-size:13px;line-height:1.6;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:0 2px 14px rgba(0,0,0,.35);font-family:"Noto Sans Thai",sans-serif}#consent-banner span{flex:1;min-width:210px}#consent-banner button{border:0;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}#cb-accept{background:#06C755;color:#0F2418}#cb-decline{background:transparent;color:#CFC9BE;border:1px solid #555;margin-left:8px}';
   document.head.appendChild(st);
@@ -295,13 +310,17 @@
   b.id = 'consent-banner';
   b.innerHTML = '<span>เราใช้คุกกี้เพื่อเก็บสถิติการเข้าชมเว็บไซต์ (Analytics) ข้อมูลไม่ระบุตัวตน</span><div><button id="cb-accept">ยอมรับ</button><button id="cb-decline">ปฏิเสธ</button></div>';
   document.body.appendChild(b);
+  function setChoice(choice) {
+    try { localStorage.setItem(KEY, choice); } catch (e) {}
+    b.remove();
+  }
   document.getElementById('cb-accept').onclick = function () {
-    try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
-    b.remove(); loadAnalytics();
+    if (window.gtag) { gtag('consent', 'update', {'analytics_storage': 'granted'}); }
+    setChoice('accepted');
   };
   document.getElementById('cb-decline').onclick = function () {
-    try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
-    b.remove();
+    if (window.gtag) { gtag('consent', 'update', {'analytics_storage': 'denied'}); }
+    setChoice('declined');
   };
 })();
 </script>

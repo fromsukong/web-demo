@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Manah — ร้านกาแฟเล็กๆ อบอุ่นทุกแก้ว</title>
+<meta name="description" content="Coffee Manah ร้านกาแฟเล็กๆ ในเมืองแพร่ เมล็ดคั่วสดทุกเช้า อเมริกาโน่ ลาเต้ มอคค่า เบเกอรี่โฮมเมด เปิดทุกวัน 07:00–18:00 ฟรี Wi-Fi มีมุมนั่งทำงาน">
+<link rel="canonical" href="https://web-demo.fromsukong.com/coffee/">
+<meta name="theme-color" content="#C04000">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coffee Manah">
+<meta property="og:title" content="Coffee Manah — ร้านกาแฟเล็กๆ อบอุ่นทุกแก้ว">
+<meta property="og:description" content="ร้านกาแฟเล็กๆ ในเมืองแพร่ เมล็ดคั่วสดทุกเช้า เริ่มต้น 55 บาท เปิดทุกวัน 07:00–18:00">
+<meta property="og:url" content="https://web-demo.fromsukong.com/coffee/">
+<meta property="og:image" content="https://web-demo.fromsukong.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coffee Manah — ร้านกาแฟเล็กๆ อบอุ่นทุกแก้ว">
+<meta name="twitter:description" content="ร้านกาแฟเล็กๆ ในเมืองแพร่ เมล็ดคั่วสดทุกเช้า เริ่มต้น 55 บาท">
+<meta name="twitter:image" content="https://web-demo.fromsukong.com/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Cafe",
+  "name": "Coffee Manah",
+  "description": "ร้านกาแฟเล็กๆ ในเมืองแพร่ เมล็ดคั่วสดทุกเช้า มีมุมนั่งชิลและมุมทำงาน ฟรี Wi-Fi",
+  "url": "https://web-demo.fromsukong.com/coffee/",
+  "image": "https://web-demo.fromsukong.com/og.png",
+  "telephone": "+66-91-234-5678",
+  "priceRange": "55-150 บาท",
+  "servesCuisine": "Coffee & Bakery",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ถ.เจริญเมือง ต.ในเวียง",
+    "addressLocality": "อ.เมืองแพร่",
+    "addressRegion": "แพร่",
+    "postalCode": "54000",
+    "addressCountry": "TH"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 18.1445, "longitude": 100.141},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "07:00", "closes": "18:00"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600;800&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0D0D0D; --card:#161616; --card2:#1C1C1C; --ink:#F2EDE3; --muted:#A9A296;
+    --brand:#C04000; --brand-light:#E8804A; --line:#262626; --cta:#06C755;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',sans-serif;line-height:1.7;padding-bottom:92px}
+  h1,h2,h3{font-family:'Noto Serif Thai',serif;line-height:1.35}
+  img,svg{display:block}
+  a{color:inherit;text-decoration:none}
+  section{max-width:640px;margin:0 auto;padding:44px 20px 0}
+  .sec-title{font-size:26px;font-weight:800;margin-bottom:6px}
+  .sec-sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  .demo-badge{position:fixed;top:12px;left:12px;z-index:60;background:rgba(13,13,13,.82);color:#E8E2D6;font-size:12px;padding:7px 13px;border-radius:999px;border:1px solid #333;letter-spacing:.3px;backdrop-filter:blur(4px)}
+
+  .hero{position:relative;overflow:hidden;background:radial-gradient(700px 340px at 18% -6%,rgba(192,64,0,.28),transparent 62%),radial-gradient(560px 300px at 88% 12%,rgba(192,64,0,.14),transparent 60%),var(--bg)}
+  .hero-inner{max-width:640px;margin:0 auto;padding:96px 20px 40px;text-align:center}
+  .hero-cup{width:120px;margin:0 auto 18px}
+  .hero-logo{font-family:'Noto Serif Thai',serif;font-weight:800;font-size:38px;letter-spacing:.5px}
+  .hero-logo em{font-style:normal;color:var(--brand-light)}
+  .hero-tag{font-size:15px;color:#CFC9BE;margin-top:10px}
+  .hero-chip{display:inline-block;margin-top:18px;font-size:13px;padding:6px 15px;border:1px solid rgba(232,128,74,.5);color:var(--brand-light);background:rgba(192,64,0,.12);border-radius:999px}
+  .hero-stats{display:flex;justify-content:center;gap:28px;margin-top:28px;font-size:12px;color:var(--muted)}
+  .hero-stats b{display:block;font-family:'Noto Serif Thai',serif;font-size:19px;color:var(--ink)}
+
+  .about-copy{font-size:15px;color:#D8D2C6}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{font-size:13px;color:var(--brand-light);background:rgba(192,64,0,.1);border:1px solid rgba(192,64,0,.35);padding:5px 13px;border-radius:999px}
+
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .price-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 18px;border-bottom:1px solid var(--line)}
+  .price-row:last-of-type{border-bottom:none}
+  .item{font-weight:700;font-size:15px}
+  .item-note{font-size:12px;color:var(--muted);font-weight:400}
+  .price{font-family:'Noto Serif Thai',serif;font-weight:800;font-size:17px;color:var(--brand-light);white-space:nowrap}
+  .price-note{font-size:12px;color:var(--muted);margin-top:10px}
+
+  .rv{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 2px 8px}
+  .rv::-webkit-scrollbar{display:none}
+  .rv-card{flex:0 0 84%;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:170px;display:flex;flex-direction:column;gap:10px}
+  .stars{color:#E8A33D;font-size:15px;letter-spacing:2px}
+  .rv-text{font-size:14px;color:#D8D2C6;flex:1}
+  .rv-tag{font-size:12px;color:var(--muted)}
+  .rv-nav{display:none;justify-content:flex-end;gap:8px;margin-top:10px}
+  .rv-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--brand-light);font-size:18px;cursor:pointer}
+  @media(min-width:768px){
+    .rv-card{flex-basis:380px}
+    .rv-nav{display:flex}
+  }
+
+  .map-wrap{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .map-wrap iframe{display:block;width:100%;height:240px;border:0}
+  .map-link{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:var(--brand-light);border-bottom:2px solid var(--brand)}
+
+  .contact-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 18px}
+  .contact-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .contact-row:last-child{border-bottom:none}
+  .contact-row svg{flex:0 0 26px;width:26px;height:26px}
+
+  footer{max-width:640px;margin:0 auto;padding:46px 20px 10px;text-align:center;color:var(--muted);font-size:12px}
+  .manah-badge{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:7px 14px;border:1px solid rgba(192,64,0,.45);border-radius:999px;color:var(--brand-light);font-size:12px;font-weight:700}
+  .manah-dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 10px rgba(192,64,0,.8)}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#121212;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px}
+  .sticky-thumb{width:46px;height:46px;border-radius:10px;background:rgba(192,64,0,.14);border:1px solid rgba(192,64,0,.35);flex:0 0 46px;display:flex;align-items:center;justify-content:center}
+  .sticky-thumb svg{width:26px;height:26px}
+  .sticky-info{flex:1;min-width:0}
+  .sticky-name{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sticky-price{font-size:12px;color:var(--muted)}
+  .sticky-cta{display:flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:15px;padding:12px 22px;border-radius:12px;flex-shrink:0}
+  .sticky-cta svg{width:20px;height:20px;flex:0 0 20px}
+  @media(min-width:768px){
+    .sticky{width:min(680px,100%);left:50%;transform:translateX(-50%);border-radius:16px 16px 0 0}
+  }
+</style>
+</head>
+<body>
+
+<a class="demo-badge" href="../" aria-label="กลับไปหน้าตัวอย่างทั้งหมด">‹ ดูตัวอย่างทั้งหมด</a>
+
+<header class="hero">
+  <div class="hero-inner">
+    <svg class="hero-cup" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <path d="M78 52c-6-12 6-18 0-30M104 58c-6-12 6-18 0-30M130 52c-6-12 6-18 0-30" stroke="#E8804A" stroke-width="7" stroke-linecap="round"/>
+      <path d="M55 108h88v22c0 24-19 40-44 40s-44-16-44-40v-22z" fill="#C04000"/>
+      <path d="M143 112h8a16 16 0 0 1 0 32h-10" stroke="#C04000" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="99" cy="176" rx="58" ry="9" fill="#C04000"/>
+      <path d="M90 128c6-4 12-4 18 0" stroke="#0D0D0D" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+    </svg>
+    <h1 class="hero-logo">Coffee <em>Manah</em></h1>
+    <p class="hero-tag">ร้านกาแฟเล็กๆ อบอุ่นๆ — คั่วเมล็ดสดทุกเช้า ชงให้ดื่มช้าๆ</p>
+    <span class="hero-chip">เมล็ดคั่วสดทุกเช้า</span>
+    <div class="hero-stats">
+      <div><b>07:00</b>เปิดทุกวัน</div>
+      <div><b>55฿</b>เริ่มต้น</div>
+      <div><b>4.9</b>คะแนนรีวิว</div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <h2 class="sec-title">เกี่ยวกับร้าน</h2>
+  <p class="about-copy">Coffee Manah เป็นร้านกาแฟเล็กๆ ที่อยากให้ทุกแก้วที่เสิร์ฟออกมามีความอบอุ่น เมล็ดคั่วสดทุกเช้า ชงด้วยใจ ไม่เร่งรีบ มีมุมนั่งชิล มุมทำงาน มุมอ่านหนังสือ — มากันคนเดียวก็ได้ ไม่เหงา มี Wi-Fi ให้ด้วยนะ</p>
+  <div class="chips">
+    <span class="chip">เปิดทุกวัน 07:00–18:00</span>
+    <span class="chip">เมล็ดคั่วสดทุกเช้า</span>
+    <span class="chip">ฟรี Wi-Fi</span>
+    <span class="chip">มีมุมนั่งทำงาน</span>
+  </div>
+</section>
+
+<section id="menu" class="reveal">
+  <h2 class="sec-title">เมนูเด่น</h2>
+  <p class="sec-sub">กาแฟและเครื่องดื่มที่ขายดีประจำร้าน</p>
+  <div class="price-card">
+    <div class="price-row">
+      <div><div class="item">เอสเพรสโซ่</div><div class="item-note">เข้มข้น เมล็ดไทยคั่วกลาง</div></div>
+      <div class="price">55 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">อเมริกาโน่</div><div class="item-note">ดริปสด ใสๆ เข้มๆ</div></div>
+      <div class="price">60 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">ลาเต้</div><div class="item-note">นมสด ฟองนุ่ม</div></div>
+      <div class="price">70 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">คาปูชิโน่</div><div class="item-note">ฟองหนา หอมเมล็ด</div></div>
+      <div class="price">70 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">มอคค่า</div><div class="item-note">ช็อกโกแลต + กาแฟ</div></div>
+      <div class="price">75 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">ชาเขียวลาเต้</div><div class="item-note">ชามัทฉะแท้</div></div>
+      <div class="price">75 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">โกโก้ร้อน</div><div class="item-note">เข้มข้น หอมนม</div></div>
+      <div class="price">65 บาท</div>
+    </div>
+    <div class="price-row">
+      <div><div class="item">เบเกอรี่โฮมเมด</div><div class="item-note">คุกกี้ / เค้ก / ขนมปัง</div></div>
+      <div class="price">45 บาท ขึ้นไป</div>
+    </div>
+  </div>
+  <p class="price-note">เมนูหมุนเวียนตามฤดูกาล สอบถามเมนูลับประจำวันใน LINE ได้เลย</p>
+</section>
+
+<section id="reviews" class="reveal">
+  <h2 class="sec-title">รีวิวจากลูกค้า</h2>
+  <p class="sec-sub">คะแนน 4.9 จาก 120 รีวิว</p>
+  <div class="rv" id="rvTrack">
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">กาแฟหอมมาก คั่วสดจริงๆ แอบถามพี่เจ้าของร้านว่าคั่วเองหรือเปล่า คุยเพลินเลย ร้านเล็กๆ แต่อบอุ่นดี</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">มุมทำงานดีมาก Wi-Fi แรง ไม่มีเสียงดัง นั่งได้ทั้งวัน สั่งอเมริกาโน่แก้วเดียว นั่งทำงานยาวๆ ได้เลย</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">ลาเต้อร่อย ฟองนมละเอียด เบเกอรี่โฮมเมดก็ดี อันนี้ไม่คิดว่ามาเจอร้านดีๆ แบบนี้ในเมือง</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+    <div class="rv-card">
+      <div class="stars">★★★★★</div>
+      <p class="rv-text">พนักงานใจดี ถามอะไรตอบหมด แนะนำเมนูให้ถูกใจ เหมาะกับคนชอบกาแฟจริงๆ มาอีกแน่นอน</p>
+      <span class="rv-tag">รีวิว Google</span>
+    </div>
+  </div>
+  <div class="rv-nav">
+    <button class="rv-btn" id="rvPrev" aria-label="ก่อนหน้า">‹</button>
+    <button class="rv-btn" id="rvNext" aria-label="ถัดไป">›</button>
+  </div>
+</section>
+
+<section id="map" class="reveal">
+  <h2 class="sec-title">แผนที่</h2>
+  <div class="map-wrap">
+    <iframe src="https://maps.google.com/maps?q=18.1445,100.1410&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="แผนที่ที่ตั้ง"></iframe>
+  </div>
+  <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=18.1445,100.1410" target="_blank" rel="noopener">เปิดใน Google Maps →</a>
+</section>
+
+<section id="contact" class="reveal">
+  <h2 class="sec-title">ติดต่อ</h2>
+  <p class="sec-sub">ทักมาได้เลย ตอบไว</p>
+  <div class="contact-card">
+    <a class="contact-row" href="https://line.me/R/ti/p/@coffeemanah" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#06C755"><path d="M24 12.073c0-5.56-5.373-10.067-12-10.067S0 6.513 0 12.073c0 4.946 4.226 9.106 10.135 9.895v-7.001H7.083v-2.894h3.052V9.954c0-2.558 1.566-3.972 3.979-3.972 1.155 0 2.36.205 2.36.205v2.624h-1.33c-1.309 0-1.718.782-1.718 1.585v1.902h2.925l-.468 2.894h-2.457v7.001C18.775 21.18 24 16.932 24 12.073z"/></svg>
+      <span>LINE: @coffeemanah (ตอบไว)</span>
+    </a>
+    <a class="contact-row" href="tel:0912345678">
+      <svg viewBox="0 0 24 24" fill="#E8804A"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.25 1.01z"/></svg>
+      <span>โทร: 091-234-5678</span>
+    </a>
+    <div class="contact-row">
+      <svg viewBox="0 0 24 24" fill="#E8804A"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+      <span>ถ.เจริญเมือง ต.ในเวียง อ.เมือง จ.แพร่ 54000</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Coffee Manah — ร้านกาแฟเล็กๆ ในเมืองแพร่</div>
+  <a class="manah-badge" href="https://fromsukong.com" target="_blank" rel="noopener"><span class="manah-dot"></span>Made with Manah</a>
+</footer>
+
+<div class="sticky">
+  <div class="sticky-thumb">
+    <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <path d="M55 108h88v22c0 24-19 40-44 40s-44-16-44-40v-22z" fill="#C04000"/>
+      <path d="M143 112h8a16 16 0 0 1 0 32h-10" stroke="#C04000" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="99" cy="176" rx="58" ry="9" fill="#C04000"/>
+    </svg>
+  </div>
+  <div class="sticky-info">
+    <div class="sticky-name">Coffee Manah</div>
+    <div class="sticky-price">เริ่มต้น 55 บาท · เปิดทุกวัน 07:00–18:00</div>
+  </div>
+  <a class="sticky-cta" href="https://line.me/R/ti/p/@coffeemanah" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-5.56-5.373-10.067-12-10.067S0 6.513 0 12.073c0 4.946 4.226 9.106 10.135 9.895v-7.001H7.083v-2.894h3.052V9.954c0-2.558 1.566-3.972 3.979-3.972 1.155 0 2.36.205 2.36.205v2.624h-1.33c-1.309 0-1.718.782-1.718 1.585v1.902h2.925l-.468 2.894h-2.457v7.001C18.775 21.18 24 16.932 24 12.073z"/></svg>
+    สั่งผ่าน LINE
+  </a>
+</div>
+
+<script>
+  const track = document.getElementById('rvTrack');
+  const step = () => track.querySelector('.rv-card').offsetWidth + 12;
+  document.getElementById('rvNext').onclick = () => track.scrollBy({left: step(), behavior:'smooth'});
+  document.getElementById('rvPrev').onclick = () => track.scrollBy({left: -step(), behavior:'smooth'});
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
