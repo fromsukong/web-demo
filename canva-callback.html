@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FromSukong — Canva Authorization</title>
+<style>
+  body { background:#0A0A0A; color:#F5F2EF; font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; padding:20px; }
+  .card { max-width:520px; width:100%; background:#121110; border:1px solid #23201C; border-radius:12px; padding:32px; text-align:center; }
+  h1 { font-size:20px; margin:0 0 8px; color:#fff; }
+  p { color:#A8A29A; font-size:14px; line-height:1.5; }
+  code { display:block; background:#0A0A0A; border:1px solid #2A2723; color:#E8601B; font-size:18px; font-weight:700; padding:14px; border-radius:8px; margin:18px 0; word-break:break-all; }
+  button { background:#C04000; color:#fff; border:none; font-weight:700; font-size:14px; padding:10px 22px; border-radius:8px; cursor:pointer; }
+  button:hover { background:#E8601B; }
+  .ok { color:#4ADE80; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Canva Authorization</h1>
+  <p id="msg">Checking…</p>
+  <code id="code" style="display:none"></code>
+  <button id="copy" style="display:none">Copy code</button>
+</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const error = params.get('error');
+  const msg = document.getElementById('msg');
+  if (error) {
+    msg.textContent = 'Authorization failed: ' + error + (params.get('error_description') ? ' — ' + params.get('error_description') : '');
+    msg.style.color = '#F87171';
+  } else if (code) {
+    msg.innerHTML = '<span class="ok">✓ Authorized!</span> Copy this code and paste it into the Discord chat:';
+    document.getElementById('code').textContent = code;
+    document.getElementById('code').style.display = 'block';
+    const copy = document.getElementById('copy');
+    copy.style.display = 'inline-block';
+    copy.onclick = () => { navigator.clipboard.writeText(code).then(() => { copy.textContent = 'Copied ✓'; }); };
+  } else {
+    msg.textContent = 'No authorization code found in the URL. Please restart the connection flow.';
+  }
+</script>
+</body>
+</html>
